@@ -20,6 +20,16 @@ namespace BeFaster.App.Tests.Solutions.SUM
         {
             return SumSolution.Sum(x, y);
         }
+
+        [TestCase(-1, 50)] // Negative input
+        [TestCase(50, -1)] // Negative input
+        [TestCase(101, 50)] // Input above 100
+        [TestCase(50, 101)] // Input above 100
+        public void ComputeSum_InvalidInputs(int x, int y)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => SumSolution.Sum(x, y));
+        }
     }
 }
+
 
