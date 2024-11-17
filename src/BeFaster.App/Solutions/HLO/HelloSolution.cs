@@ -6,8 +6,14 @@ namespace BeFaster.App.Solutions.HLO
     {
         public static string Hello(string? friendName)
         {
-            return "Hello, World!";
+            if (string.IsNullOrWhiteSpace(friendName))
+            {
+                throw new ArgumentException("Invalid Input: freindName cannot be null, empty, or whitespace",nameof(friendName));
+            }
+
+            return $"Hello, {friendName}!";
         }
     }
 }
+
 
