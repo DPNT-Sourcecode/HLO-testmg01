@@ -11,5 +11,15 @@ namespace BeFaster.App.Tests.Solutions.SUM
         {
             return SumSolution.Sum(x, y);
         }
+
+        [TestCase(0, 0, ExpectedResult = 0)]
+        [TestCase(100, 100, ExpectedResult = 200)]
+        [TestCase(50, 50, ExpectedResult = 100)]
+        [TestCase(10, 90, ExpectedResult = 100)]
+        public int ComputeSum_ValidInputs(int x, int y)
+        {
+            return SumSolution.Sum(x, y);
+        }
     }
 }
+
