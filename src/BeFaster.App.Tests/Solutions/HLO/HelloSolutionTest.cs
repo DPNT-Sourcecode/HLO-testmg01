@@ -12,8 +12,16 @@ namespace BeFaster.App.Tests.Solutions.HLO
         {
             return HelloSolution.Hello(friendName);
         }
+
+        [TestCase("")] // Empty string
+        [TestCase(" ")] // Whitespace
+        public void Hello_InvalidInputs_ThrowsException(string friendName)
+        {
+            Assert.Throws<ArgumentException>(() => HelloSolution.Hello(friendName));
+        }
     }
 }
+
 
 
 
