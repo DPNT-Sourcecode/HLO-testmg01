@@ -25,9 +25,4 @@
     <ProjectReference Include="..\..\src\BeFaster.App\BeFaster.App.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Solutions\NewFolder\" />
-  </ItemGroup>
-
 </Project>
-
